@@ -1,0 +1,432 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { cvData, type Language } from "../data/cv";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "es" } },
+    { params: { lang: "gl" } },
+    { params: { lang: "en" } },
+    { params: { lang: "pt" } },
+  ];
+}
+
+const { lang } = Astro.params;
+const data = cvData[lang as Language];
+const { personalInfo, experience, education, skills } = data;
+
+// Labels based on language
+const labels: Record<Language, any> = {
+  es: {
+    exp: "Experiencia Profesional",
+    edu: "Educación",
+    skills: "Habilidades Técnicas",
+    lang: "Idiomas",
+  },
+  gl: {
+    exp: "Experiencia Profesional",
+    edu: "Educación",
+    skills: "Habilidades Técnicas",
+    lang: "Idiomas",
+  },
+  en: {
+    exp: "Professional Experience",
+    edu: "Education",
+    skills: "Technical Skills",
+    lang: "Languages",
+  },
+  pt: {
+    exp: "Experiência Profissional",
+    edu: "Educação",
+    skills: "Habilidades Técnicas",
+    lang: "Idiomas",
+  },
+};
+
+const t = labels[lang as Language];
+---
+
+<Layout title={`${personalInfo.name} - CV`} lang={lang as string}>
+  <main class="cv-container">
+    <header class="header">
+      <div class="header-content">
+        <img
+          src="/1751494282907.jpeg"
+          alt={personalInfo.name}
+          class="profile-img"
+        />
+        <div class="header-main">
+          <h1>{personalInfo.name}</h1>
+          <p class="title">{personalInfo.title}</p>
+          <div class="contact-info">
+            <span class="info-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                ></path><circle cx="12" cy="10" r="3"></circle></svg
+              >
+              {personalInfo.location}
+            </span>
+            <span class="info-item">•</span>
+            <a href={`mailto:${personalInfo.email}`} class="info-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
+                  d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+              >
+              {personalInfo.email}
+            </a>
+            <span class="info-item">•</span>
+            <a href={personalInfo.website} target="_blank" class="info-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><circle cx="12" cy="12" r="10"></circle><line
+                  x1="2"
+                  y1="12"
+                  x2="22"
+                  y2="12"></line><path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path></svg
+              >
+              {personalInfo.website.replace("https://", "")}
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <p class="summary">{personalInfo.summary}</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">{t.exp}</h2>
+      <div class="experience-list">
+        {
+          experience.map((exp: any) => (
+            <div class="experience-item">
+              <div class="item-header">
+                <h3>{exp.position}</h3>
+                <span class="period">{exp.period}</span>
+              </div>
+              <div class="item-sub">
+                <span class="company">{exp.company}</span>
+                <span class="location">| {exp.location}</span>
+              </div>
+              <ul class="responsibilities">
+                {exp.responsibilities.map((res: string) => (
+                  <li>{res}</li>
+                ))}
+              </ul>
+              <div class="tech-stack">
+                {exp.technologies.map((tech: string) => (
+                  <span class="badge">{tech}</span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">{t.edu}</h2>
+      <div class="education-list">
+        {
+          education.map((edu: any) => (
+            <div class="education-item">
+              <div class="item-header">
+                <h3>{edu.degree}</h3>
+                <span class="period">{edu.period}</span>
+              </div>
+              <div class="item-sub">
+                <span class="institution">{edu.institution}</span>
+                <span class="location">| {edu.location}</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <div class="skills-grid">
+      <section class="section">
+        <h2 class="section-title">{t.skills}</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <div class="skill-list">
+              {
+                skills.backend.map((skill: string) => (
+                  <span class="badge">{skill}</span>
+                ))
+              }
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <div class="skill-list">
+              {
+                skills.frontend.map((skill: string) => (
+                  <span class="badge">{skill}</span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">{t.lang}</h2>
+        <div class="skill-list">
+          {
+            skills.languages.map((lang: string) => (
+              <span class="badge">{lang}</span>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .header {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    background-color: var(--muted);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+  }
+
+  .contact-info {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .summary {
+    font-size: 0.95rem;
+    color: var(--text);
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  .section {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .experience-item,
+  .education-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem;
+  }
+
+  .item-sub {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .period {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    font-weight: 600;
+    font-family: var(--font-heading);
+  }
+
+  .company,
+  .institution {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .location {
+    color: var(--secondary);
+    font-size: 0.9rem;
+  }
+
+  .responsibilities {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .responsibilities li {
+    margin-bottom: 0.6rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .skill-groups {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .skill-group h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .cv-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    .skill-groups {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  @media print {
+    .cv-container {
+      padding: 0;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+      break-inside: auto; /* Permite que la sección empiece en una página y siga en otra */
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 1.5rem;
+      break-inside: avoid;
+    }
+
+    .responsibilities {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .skills-grid {
+      display: grid !important;
+      grid-template-columns: 2fr 1fr !important;
+      gap: 3rem;
+    }
+
+    .header {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+    .profile-img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+</style>

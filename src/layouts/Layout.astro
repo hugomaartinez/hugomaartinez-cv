@@ -1,0 +1,219 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  lang: string;
+}
+
+const { title, lang } = Astro.props;
+
+const languages = [
+  { code: "es", name: "Español", flag: "/flags/es.svg" },
+  { code: "en", name: "English", flag: "/flags/gb.svg" },
+  { code: "gl", name: "Galego", flag: "/flags/galicia.svg" },
+  { code: "pt", name: "Português", flag: "/flags/pt.svg" },
+];
+---
+
+<!doctype html>
+<html lang={lang} data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CV de Hugo Martínez Barros" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script is:inline>
+      // Theme initialization
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+  </head>
+  <body>
+    <div class="controls no-print">
+      <div class="lang-switcher">
+        {
+          languages.map((l) => (
+            <a
+              href={`/${l.code}`}
+              class={`lang-link ${l.code === lang ? "active" : ""}`}
+              title={l.name}
+            >
+              <img src={l.flag} alt={l.name} class="flag-icon" />
+            </a>
+          ))
+        }
+      </div>
+
+      <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
+        <svg
+          id="sun-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path
+            d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path
+            d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path
+            d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path
+            d="m19.07 4.93-1.41 1.41"></path></svg
+        >
+        <svg
+          id="moon-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg
+        >
+      </button>
+    </div>
+
+    <slot />
+
+    <button onclick="window.print()" class="print-button no-print">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><polyline points="6 9 6 2 18 2 18 9"></polyline><path
+          d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+        ></path><rect x="6" y="14" width="12" height="8"></rect></svg
+      >
+      Imprimir CV
+    </button>
+
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle?.addEventListener("click", () => {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        const nextTheme = currentTheme === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", nextTheme);
+        localStorage.setItem("theme", nextTheme);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .controls {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--card-bg);
+    padding: 0.4rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .lang-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.2s;
+    opacity: 0.5;
+    filter: grayscale(0.5);
+    border: 1px solid transparent;
+  }
+
+  .lang-link:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.1);
+  }
+
+  .lang-link.active {
+    opacity: 1;
+    filter: grayscale(0);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    transform: scale(1.05);
+  }
+
+  .flag-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .icon-button {
+    background: var(--card-bg);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  #sun-icon {
+    display: none;
+  }
+  #moon-icon {
+    display: block;
+  }
+
+  [data-theme="dark"] #sun-icon {
+    display: block;
+    color: #fbbf24;
+  }
+
+  [data-theme="dark"] #moon-icon {
+    display: none;
+  }
+</style>
