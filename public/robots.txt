@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cv.hugomaartinez.dev/sitemap-index.xml

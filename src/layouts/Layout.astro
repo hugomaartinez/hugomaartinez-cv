@@ -4,9 +4,16 @@ import "../styles/global.css";
 interface Props {
   title: string;
   lang: string;
+  description?: string;
+  image?: string;
 }
 
-const { title, lang } = Astro.props;
+const {
+  title,
+  lang,
+  description = "CV de Hugo Martínez Barros - Desarrollador Fullstack especializado en Java, Angular y tecnologías web modernas.",
+  image = "/1751494282907.jpeg",
+} = Astro.props;
 
 const languages = [
   { code: "es", name: "Español", flag: "/flags/es.svg" },
@@ -14,17 +21,66 @@ const languages = [
   { code: "gl", name: "Galego", flag: "/flags/galicia.svg" },
   { code: "pt", name: "Português", flag: "/flags/pt.svg" },
 ];
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// JSON-LD for Person/Resume
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Hugo Martínez Barros",
+  jobTitle: "Fullstack Developer",
+  url: "https://cv.hugomaartinez.dev",
+  image: "https://cv.hugomaartinez.dev/1751494282907.jpeg",
+  sameAs: [
+    "https://linkedin.com/in/hugomaartinez",
+    "https://github.com/hugomaartinez",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Gondomar",
+    addressCountry: "ES",
+  },
+};
 ---
 
 <!doctype html>
 <html lang={lang} data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="CV de Hugo Martínez Barros" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+
+    <!-- Robot tags -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- JSON-LD -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personSchema)}
+    />
+
     <script is:inline>
       // Theme initialization
       const theme = (() => {

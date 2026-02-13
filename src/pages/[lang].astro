@@ -24,31 +24,43 @@ const labels: Record<Language, any> = {
     edu: "Educación",
     skills: "Habilidades Técnicas",
     lang: "Idiomas",
+    description:
+      "CV de Hugo Martínez Barros - Desarrollador Fullstack con experiencia en Java, Angular y sector automoción.",
   },
   gl: {
     exp: "Experiencia Profesional",
     edu: "Educación",
     skills: "Habilidades Técnicas",
     lang: "Idiomas",
+    description:
+      "CV de Hugo Martínez Barros - Desenvolvedor Fullstack con experiencia en Java, Angular e sector automoción.",
   },
   en: {
     exp: "Professional Experience",
     edu: "Education",
     skills: "Technical Skills",
     lang: "Languages",
+    description:
+      "Hugo Martínez Barros CV - Fullstack Developer experienced in Java (Spring Boot) and Angular.",
   },
   pt: {
     exp: "Experiência Profissional",
     edu: "Educação",
     skills: "Habilidades Técnicas",
     lang: "Idiomas",
+    description:
+      "CV de Hugo Martínez Barros - Desenvolvedor Fullstack com experiência em Java, Angular e setor automotivo.",
   },
 };
 
 const t = labels[lang as Language];
 ---
 
-<Layout title={`${personalInfo.name} - CV`} lang={lang as string}>
+<Layout
+  title={`${personalInfo.name} - CV`}
+  lang={lang as string}
+  description={t.description}
+>
   <main class="cv-container">
     <header class="header">
       <div class="header-content">
