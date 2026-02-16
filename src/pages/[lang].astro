@@ -23,6 +23,7 @@ const labels: Record<Language, any> = {
     exp: "Experiencia Profesional",
     edu: "Educación",
     skills: "Habilidades Técnicas",
+    ai_skills: "IA & Big Data",
     lang: "Idiomas",
     description:
       "CV de Hugo Martínez Barros - Desarrollador Fullstack con experiencia en Java, Angular y sector automoción.",
@@ -31,6 +32,7 @@ const labels: Record<Language, any> = {
     exp: "Experiencia Profesional",
     edu: "Educación",
     skills: "Habilidades Técnicas",
+    ai_skills: "IA & Big Data",
     lang: "Idiomas",
     description:
       "CV de Hugo Martínez Barros - Desenvolvedor Fullstack con experiencia en Java, Angular e sector automoción.",
@@ -39,6 +41,7 @@ const labels: Record<Language, any> = {
     exp: "Professional Experience",
     edu: "Education",
     skills: "Technical Skills",
+    ai_skills: "AI & Big Data",
     lang: "Languages",
     description:
       "Hugo Martínez Barros CV - Fullstack Developer experienced in Java (Spring Boot) and Angular.",
@@ -47,6 +50,7 @@ const labels: Record<Language, any> = {
     exp: "Experiência Profissional",
     edu: "Educação",
     skills: "Habilidades Técnicas",
+    ai_skills: "IA & Big Data",
     lang: "Idiomas",
     description:
       "CV de Hugo Martínez Barros - Desenvolvedor Fullstack com experiência em Java, Angular e setor automotivo.",
@@ -206,6 +210,16 @@ const t = labels[lang as Language];
             <div class="skill-list">
               {
                 skills.frontend.map((skill: string) => (
+                  <span class="badge">{skill}</span>
+                ))
+              }
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>{t.ai_skills}</h3>
+            <div class="skill-list">
+              {
+                skills.data_ia.map((skill: string) => (
                   <span class="badge">{skill}</span>
                 ))
               }
