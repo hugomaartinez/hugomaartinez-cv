@@ -403,11 +403,20 @@ const t = labels[lang as Language];
   }
 
   @media print {
+    @page {
+      margin: 0; /* Hides browser headers and footers */
+    }
+
+    body {
+      margin: 1.5cm; /* Adds margin back to content so it's not cut off */
+    }
+
     .cv-container {
       padding: 0;
       margin: 0;
       border: none;
       box-shadow: none;
+      max-width: 100%;
     }
 
     .section {
