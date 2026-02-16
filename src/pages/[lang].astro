@@ -191,54 +191,52 @@ const t = labels[lang as Language];
       </div>
     </section>
 
-    <div class="skills-grid">
-      <section class="section">
-        <h2 class="section-title">{t.skills}</h2>
-        <div class="skill-groups">
-          <div class="skill-group">
-            <h3>Backend</h3>
-            <div class="skill-list">
-              {
-                skills.backend.map((skill: string) => (
-                  <span class="badge">{skill}</span>
-                ))
-              }
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Frontend</h3>
-            <div class="skill-list">
-              {
-                skills.frontend.map((skill: string) => (
-                  <span class="badge">{skill}</span>
-                ))
-              }
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>{t.ai_skills}</h3>
-            <div class="skill-list">
-              {
-                skills.data_ia.map((skill: string) => (
-                  <span class="badge">{skill}</span>
-                ))
-              }
-            </div>
+    <section class="section">
+      <h2 class="section-title">{t.skills}</h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <div class="skill-list">
+            {
+              skills.backend.map((skill: string) => (
+                <span class="badge">{skill}</span>
+              ))
+            }
           </div>
         </div>
-      </section>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <div class="skill-list">
+            {
+              skills.frontend.map((skill: string) => (
+                <span class="badge">{skill}</span>
+              ))
+            }
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>{t.ai_skills}</h3>
+          <div class="skill-list">
+            {
+              skills.data_ia.map((skill: string) => (
+                <span class="badge">{skill}</span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="section">
-        <h2 class="section-title">{t.lang}</h2>
-        <div class="skill-list">
-          {
-            skills.languages.map((lang: string) => (
-              <span class="badge">{lang}</span>
-            ))
-          }
-        </div>
-      </section>
-    </div>
+    <section class="section">
+      <h2 class="section-title">{t.lang}</h2>
+      <div class="skill-list">
+        {
+          skills.languages.map((lang: string) => (
+            <span class="badge">{lang}</span>
+          ))
+        }
+      </div>
+    </section>
   </main>
 </Layout>
 
@@ -393,12 +391,6 @@ const t = labels[lang as Language];
     gap: 0.4rem;
   }
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-  }
-
   @media (max-width: 768px) {
     .cv-container {
       margin: 1rem;
@@ -407,10 +399,6 @@ const t = labels[lang as Language];
     .skill-groups {
       flex-direction: column;
       gap: 1.5rem;
-    }
-    .skills-grid {
-      grid-template-columns: 1fr;
-      gap: 0;
     }
   }
 
@@ -438,10 +426,19 @@ const t = labels[lang as Language];
       line-height: 1.5;
     }
 
-    .skills-grid {
+    .skill-groups {
       display: grid !important;
-      grid-template-columns: 2fr 1fr !important;
-      gap: 3rem;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 2rem !important;
+    }
+
+    .skill-group h3 {
+      font-size: 0.7rem !important;
+    }
+
+    .badge {
+      font-size: 0.75rem !important;
+      padding: 0.2rem 0.5rem !important;
     }
 
     .header {
@@ -450,7 +447,12 @@ const t = labels[lang as Language];
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 1.8rem !important;
+      margin-top: 0;
+    }
+    .title {
+      font-size: 1.1rem !important;
+      margin-bottom: 0.5rem !important;
     }
     .profile-img {
       width: 100px;
