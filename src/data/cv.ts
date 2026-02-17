@@ -4,7 +4,7 @@ export const cvData: Record<Language, any> = {
   es: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Desarrollador Fullstack",
+      title: "Software Engineer | Java & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, España",
@@ -12,7 +12,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Desarrollador Fullstack con cerca de 2 años de trayectoria, principalmente vinculado a proyectos del sector automoción. Experiencia con el stack Java (Spring Boot) y Angular, encargándome tanto del mantenimiento como de la implementación de nuevas funcionalidades e integraciones de datos. Actualmente cursando Especialización en IA y Big Data.",
+        "Desarrollador Fullstack con más de 2 años de experiencia, principalmente vinculado a proyectos del sector automoción. Experiencia con el stack Java (Spring Boot) y Angular, encargándome tanto del mantenimiento como de la implementación de nuevas funcionalidades e integraciones de datos. Actualmente cursando Especialización en IA y Big Data.",
     },
     experience: [
       {
@@ -21,13 +21,14 @@ export const cvData: Record<Language, any> = {
         period: "Oct 2024 - Actual",
         location: "Vigo, España",
         responsibilities: [
-          "Desarrollo y mantenimiento de una plataforma para gestión de talleres/concesionarios, utilizando Java (Spring Boot) para el back-end y Angular para el front-end.",
+          "Mantenimiento y evolución de arquitecturas backend en Java, optimizando consultas en MariaDB para garantizar la eficiencia de procesos críticos",
+          "Implementación de interfaces dinámicas con Angular, mejorando la usabilidad y el flujo de datos entre cliente y servidor",
           "Migración progresiva de interfaces basadas en tecnologías legacy (JSP, JavaScript nativo y jQuery) hacia una arquitectura moderna con Angular.",
           "Implementación de una integración con Renault, automatizando el envío y procesamiento de archivos de movimientos de vehículos de ocasión.",
           "Implementación de mejoras en el módulo de compra y venta de VO/VN, incluyendo el desarrollo de nuevas interfaces en Angular y lógica de negocio en Java.",
           "Diseño y despliegue de un sistema de gestión de contenidos (CMS) mediante Hugo y PayloadCMS para la red de talleres de marcas como Renault, Dacia, Porsche, Motrio y Seat.",
           "Reestructuración y optimización de tablas en bases de datos MariaDB, SQL y MongoDB para mejorar el rendimiento del sistema.",
-          "Creación de un sistema de routing personalizado en Angular para optimizar la navegación y la experiencia de usuario en las aplicaciones.",
+          "Creación un sistema de routing personalizado en Angular para optimizar la navegación y la experiencia de usuario en las aplicaciones.",
           "Integración de servicios externos y APIs para la gestión de citas en tiempo real.",
         ],
         technologies: [
@@ -93,6 +94,9 @@ export const cvData: Record<Language, any> = {
         "Swagger",
         "OpenAPI",
         "Docker",
+        "Git",
+        "Agile/Scrum",
+        "API REST",
       ],
       frontend: [
         "Angular",
@@ -101,6 +105,7 @@ export const cvData: Record<Language, any> = {
         "TypeScript",
         "JavaScript",
         "TailwindCSS",
+        "CSS3/SASS",
       ],
       data_ia: [
         "IA Generativa & LLMs",
@@ -112,13 +117,13 @@ export const cvData: Record<Language, any> = {
         "Web Scraping (Selenium, Beautiful Soup)",
         "Análisis de Datos & PCA",
       ],
-      languages: ["Castellano (Nativo)", "Gallego (Nativo)", "Inglés (B2)"],
+      languages: ["Castellano (Nativo)", "Gallego (Nativo)", "Inglés: B2"],
     },
   },
   gl: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Desenvolvedor Fullstack",
+      title: "Software Engineer | Java & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, España",
@@ -141,7 +146,7 @@ export const cvData: Record<Language, any> = {
           "Implementación de melloras no módulo de compra e venda de VO/VN, incluíndo o desenvolvemento de novas interfaces en Angular e lóxica de negocio en Java.",
           "Deseño e despregamento dun sistema de xestión de contidos (CMS) mediante Hugo e PayloadCMS para a rede de obradoiros de marcas como Renault, Dacia, Porsche, Motrio e Seat.",
           "Reestruturación e optimización de táboas en bases de datos MariaDB, SQL e MongoDB para mellorar o rendemento do sistema.",
-          "Creación dun sistema de routing personalizado en Angular para optimizar a navegación e a experiencia de usuario nas aplicacións.",
+          "Creación dun sistema de routing personalizado en Angular para optimizar na navegación e a experiencia de usuario nas aplicacións.",
           "Integración de servizos externos e APIs para a xestión de citas en tempo real.",
         ],
         technologies: [
@@ -206,6 +211,9 @@ export const cvData: Record<Language, any> = {
         "Swagger",
         "OpenAPI",
         "Docker",
+        "Git",
+        "Agile/Scrum",
+        "API REST",
       ],
       frontend: [
         "Angular",
@@ -214,6 +222,7 @@ export const cvData: Record<Language, any> = {
         "TypeScript",
         "JavaScript",
         "TailwindCSS",
+        "CSS3/SASS",
       ],
       data_ia: [
         "IA Xenerativa & LLMs",
@@ -225,13 +234,13 @@ export const cvData: Record<Language, any> = {
         "Web Scraping (Selenium, Beautiful Soup)",
         "Análise de Datos & PCA",
       ],
-      languages: ["Castelán (Nativo)", "Galego (Nativo)", "Inglés (B2)"],
+      languages: ["Castelán (Nativo)", "Galego (Nativo)", "English: B2"],
     },
   },
   en: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Fullstack Developer",
+      title: "Software Engineer | Java & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, Spain",
@@ -320,6 +329,9 @@ export const cvData: Record<Language, any> = {
         "Swagger",
         "OpenAPI",
         "Docker",
+        "Git",
+        "Agile/Scrum",
+        "API REST",
       ],
       frontend: [
         "Angular",
@@ -328,6 +340,7 @@ export const cvData: Record<Language, any> = {
         "TypeScript",
         "JavaScript",
         "TailwindCSS",
+        "CSS3/SASS",
       ],
       data_ia: [
         "Generative AI & LLMs",
@@ -339,13 +352,13 @@ export const cvData: Record<Language, any> = {
         "Web Scraping (Selenium, Beautiful Soup)",
         "Data Analysis & PCA",
       ],
-      languages: ["Spanish (Native)", "Galician (Native)", "English (B2)"],
+      languages: ["Spanish (Native)", "Galician (Native)", "English: B2"],
     },
   },
   pt: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Desenvolvedor Fullstack",
+      title: "Software Engineer | Java & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, Espanha",
@@ -368,7 +381,7 @@ export const cvData: Record<Language, any> = {
           "Implementação de melhorias no módulo de compra e venda de VO/VN, incluindo o desenvolvimento de novas interfaces em Angular e lógica de negócio em Java.",
           "Design e implantação de um sistema de gerenciamento de conteúdo (CMS) usando Hugo e PayloadCMS para a rede de oficinas de marcas como Renault, Dacia, Porsche, Motrio e Seat.",
           "Reestruturação e otimização de tabelas em bancos de dados MariaDB, SQL e MongoDB para melhorar o desempenho do sistema.",
-          "Criação de um sistema de roteamento personalizado no Angular para otimizar a navegação e a experiência do usuário nas aplicações.",
+          "Criação de um sistema de roteamento personalizado no Angular para otimizar na navegação e a experiência do usuário nas aplicações.",
           "Integração de serviços externos e APIs para o gerenciamento de compromissos em tempo real.",
         ],
         technologies: [
@@ -434,6 +447,9 @@ export const cvData: Record<Language, any> = {
         "Swagger",
         "OpenAPI",
         "Docker",
+        "Git",
+        "Agile/Scrum",
+        "API REST",
       ],
       frontend: [
         "Angular",
@@ -442,6 +458,7 @@ export const cvData: Record<Language, any> = {
         "TypeScript",
         "JavaScript",
         "TailwindCSS",
+        "CSS3/SASS",
       ],
       data_ia: [
         "IA Generativa & LLMs",
@@ -451,9 +468,9 @@ export const cvData: Record<Language, any> = {
         "Aprendizado por Reforço (Q-Learning, Bellman)",
         "Kafka & Hadoop",
         "Web Scraping (Selenium, Beautiful Soup)",
-        "Análise de Dados & PCA",
+        "Análise de Datos & PCA",
       ],
-      languages: ["Espanhol (Nativo)", "Galego (Nativo)", "Inglês (B2)"],
+      languages: ["Espanhol (Nativo)", "Galego (Nativo)", "English: B2"],
     },
   },
 };
