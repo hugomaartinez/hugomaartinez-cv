@@ -4,7 +4,7 @@ export const cvData: Record<Language, any> = {
   es: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
+      title: "Software Developer | Java, Angular, IA & Data",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, España",
@@ -12,13 +12,13 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Fullstack Software Engineer con más de 2 años de experiencia en productos SaaS para automoción, trabajando con Java, Spring Boot, Angular, MariaDB y MongoDB. He liderado el diseño de módulos críticos de VO/VN, integraciones con fabricantes como Renault, BYD e Hyundai y microservicios para automatizar procesos de stock y facturación. Formación especializada en IA, Big Data, Kafka y Hadoop.",
+        "Software Developer con más de 2 años de experiencia en productos SaaS para automoción, trabajando con Java, Spring Boot, Angular, MariaDB y MongoDB. He liderado el diseño de módulos críticos de VO/VN, integraciones con fabricantes como Renault, BYD e Hyundai y microservicios para automatizar procesos de stock y facturación. Formación especializada en IA, Big Data, Kafka y Hadoop.",
     },
     experience: [
       {
         company: "Digitalizat Solutions",
         position: "Desarrollador Web - Fullstack",
-        period: "Oct 2024 - Actual",
+        period: "Oct 2024 - Jul 2026",
         location: "Vigo, España",
         responsibilities: [
           "Desarrollo de una integración con Renault para actualizar el stock de vehículos de ocasión de los talleres conectados a la plataforma, con procesos diarios, mensuales y bajo demanda.",
@@ -111,7 +111,7 @@ export const cvData: Record<Language, any> = {
   gl: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
+      title: "Software Developer | Java, Angular, IA & Data",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, España",
@@ -119,13 +119,13 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Fullstack Software Engineer con máis de 2 anos de experiencia en produtos SaaS para automoción, traballando con Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o deseño de módulos críticos de VO/VN, integracións con fabricantes como Renault, BYD e Hyundai e microservizos para automatizar procesos de stock e facturación. Formación especializada en IA, Big Data, Kafka e Hadoop.",
+        "Software Developer con máis de 2 anos de experiencia en produtos SaaS para automoción, traballando con Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o deseño de módulos críticos de VO/VN, integracións con fabricantes como Renault, BYD e Hyundai e microservizos para automatizar procesos de stock e facturación. Formación especializada en IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
       {
         company: "Digitalizat Solutions",
         position: "Desenvolvedor Web - Fullstack",
-        period: "Out 2024 - Actual",
+        period: "Out 2024 - Xul 2026",
         location: "Vigo, España",
         responsibilities: [
           "Desenvolvemento dunha integración con Renault para actualizar o stock de vehículos de ocasión dos obradoiros conectados á plataforma, con procesos diarios, mensuais e baixo demanda.",
@@ -218,7 +218,7 @@ export const cvData: Record<Language, any> = {
   en: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
+      title: "Software Developer | Java, Angular, AI & Data",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, Spain",
@@ -226,13 +226,13 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Fullstack Software Engineer with over 2 years of experience building automotive SaaS products with Java, Spring Boot, Angular, MariaDB and MongoDB. Led the design of critical VO/VN modules, integrations with manufacturers such as Renault, BYD and Hyundai, and microservices to automate stock and invoicing processes. Specialized training in AI, Big Data, Kafka and Hadoop.",
+        "Software Developer with over 2 years of experience building automotive SaaS products with Java, Spring Boot, Angular, MariaDB and MongoDB. Led the design of critical VO/VN modules, integrations with manufacturers such as Renault, BYD and Hyundai, and microservices to automate stock and invoicing processes. Specialized training in AI, Big Data, Kafka and Hadoop.",
     },
     experience: [
       {
         company: "Digitalizat Solutions",
         position: "Web Developer - Fullstack",
-        period: "Oct 2024 - Present",
+        period: "Oct 2024 - Jul 2026",
         location: "Vigo, Spain",
         responsibilities: [
           "Developed an integration with Renault to update the used-vehicle stock of workshops connected to the platform through daily, monthly and on-demand processes.",
@@ -325,7 +325,7 @@ export const cvData: Record<Language, any> = {
   pt: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
+      title: "Software Developer | Java, Angular, IA & Data",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, Espanha",
@@ -333,13 +333,13 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Fullstack Software Engineer com mais de 2 anos de experiência em produtos SaaS para automóvel, trabalhando com Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o design de módulos críticos de VO/VN, integrações com fabricantes como Renault, BYD e Hyundai e microsserviços para automatizar processos de stock e faturação. Formação especializada em IA, Big Data, Kafka e Hadoop.",
+        "Software Developer com mais de 2 anos de experiência em produtos SaaS para automóvel, trabalhando com Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o design de módulos críticos de VO/VN, integrações com fabricantes como Renault, BYD e Hyundai e microsserviços para automatizar processos de stock e faturação. Formação especializada em IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
       {
         company: "Digitalizat Solutions",
         position: "Desenvolvedor Web - Fullstack",
-        period: "Out 2024 - Atual",
+        period: "Out 2024 - Jul 2026",
         location: "Vigo, Espanha",
         responsibilities: [
           "Desenvolvimento de uma integração com a Renault para atualizar o stock de veículos de ocasião das oficinas conectadas à plataforma, com processos diários, mensais e sob demanda.",
