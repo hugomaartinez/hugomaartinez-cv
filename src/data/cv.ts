@@ -12,7 +12,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Software Developer con más de 2 años de experiencia en productos SaaS para automoción, trabajando con Java, Spring Boot, Angular, MariaDB y MongoDB. He liderado el diseño de módulos críticos de VO/VN, integraciones con fabricantes como Renault, BYD e Hyundai y microservicios para automatizar procesos de stock y facturación. Formación especializada en IA, Big Data, Kafka y Hadoop.",
+        "Software Developer con más de 2 años de experiencia en proyectos para automoción de marcas internacionales, trabajando con Java, Spring Boot, Angular, MariaDB y MongoDB. He liderado el diseño de módulos de VO/VN, integraciones con fabricantes como Renault, BYD e Hyundai y microservicios para automatizar procesos de stock y facturación. Formación especializada en IA, Big Data, Kafka y Hadoop.",
     },
     experience: [
       {
@@ -119,7 +119,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Software Developer con máis de 2 anos de experiencia en produtos SaaS para automoción, traballando con Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o deseño de módulos críticos de VO/VN, integracións con fabricantes como Renault, BYD e Hyundai e microservizos para automatizar procesos de stock e facturación. Formación especializada en IA, Big Data, Kafka e Hadoop.",
+        "Software Developer con máis de 2 anos de experiencia en proxectos para automoción de marcas internacionais, traballando con Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o deseño de módulos de VO/VN, integracións con fabricantes como Renault, BYD e Hyundai e microservizos para automatizar procesos de stock e facturación. Formación especializada en IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
       {
@@ -226,7 +226,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Software Developer with over 2 years of experience building automotive SaaS products with Java, Spring Boot, Angular, MariaDB and MongoDB. Led the design of critical VO/VN modules, integrations with manufacturers such as Renault, BYD and Hyundai, and microservices to automate stock and invoicing processes. Specialized training in AI, Big Data, Kafka and Hadoop.",
+        "Software Developer with over 2 years of experience building automotive applications with Java, Spring Boot, Angular, MariaDB and MongoDB. Led the design of critical VO/VN modules, integrations with manufacturers such as Renault, BYD and Hyundai, and microservices to automate stock and invoicing processes. Specialized training in AI, Big Data, Kafka and Hadoop.",
     },
     experience: [
       {
@@ -333,7 +333,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Software Developer com mais de 2 anos de experiência em produtos SaaS para automóvel, trabalhando com Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o design de módulos críticos de VO/VN, integrações com fabricantes como Renault, BYD e Hyundai e microsserviços para automatizar processos de stock e faturação. Formação especializada em IA, Big Data, Kafka e Hadoop.",
+        "Software Developer com mais de 2 anos de experiência em aplicações para automóvel de marcas internacionais, trabalhando com Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o design de módulos críticos de VO/VN, integrações com fabricantes como Renault, BYD e Hyundai e microsserviços para automatizar processos de stock e faturação. Formação especializada em IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
       {
