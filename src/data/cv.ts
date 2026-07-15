@@ -4,7 +4,7 @@ export const cvData: Record<Language, any> = {
   es: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Software Engineer | Java & Angular",
+      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, España",
@@ -12,7 +12,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Desarrollador Fullstack con más de 2 años de experiencia, principalmente vinculado a proyectos del sector automoción. Experiencia con el stack Java (Spring Boot) y Angular, encargándome tanto del mantenimiento como de la implementación de nuevas funcionalidades e integraciones de datos. Formación especializada en IA y Big Data.",
+        "Fullstack Software Engineer con más de 2 años de experiencia en productos SaaS para automoción, trabajando con Java, Spring Boot, Angular, MariaDB y MongoDB. He liderado el diseño de módulos críticos de VO/VN, integraciones con fabricantes como Renault, BYD e Hyundai y microservicios para automatizar procesos de stock y facturación. Formación especializada en IA, Big Data, Kafka y Hadoop.",
     },
     experience: [
       {
@@ -23,14 +23,11 @@ export const cvData: Record<Language, any> = {
         responsibilities: [
           "Desarrollo de una integración con Renault para actualizar el stock de vehículos de ocasión de los talleres conectados a la plataforma, con procesos diarios, mensuales y bajo demanda.",
           "Lideré el diseño y desarrollo del nuevo módulo de expedientes VO/VN para BYD e Hyundai, definiendo la estructura de datos, reglas de negocio y configuración de conceptos del expediente.",
-          "El módulo permitió gestionar expedientes de vehículos nuevos y de ocasión desde la plataforma, adaptando cada expediente a las necesidades de cada concesionario.",
-          "Este desarrollo eliminó una limitación clave del producto, facilitó la entrada de nuevos concesionarios y supuso una mejora relevante en la facturación de la empresa.",
+          "El módulo permitió gestionar expedientes de vehículos nuevos y de ocasión, eliminó una limitación clave del producto y facilitó la entrada de nuevos concesionarios, con impacto positivo en la facturación.",
           "Colaboración en la integración de microservicios para actualizar el stock de concesionarios de BYD España y para automatizar procesos de impresión de facturas.",
           "Evolución de la arquitectura backend en Java y MariaDB, optimizando consultas y procesos críticos vinculados a la gestión de vehículos y expedientes.",
-          "Desarrollo de interfaces dinámicas con Angular para mejorar la operativa interna y el flujo de datos entre cliente y servidor.",
-          "Migración progresiva de interfaces legacy basadas en JSP, JavaScript nativo y jQuery hacia una arquitectura moderna con Angular.",
-          "Diseño y despliegue de un sistema de gestión de contenidos (CMS) mediante Hugo y PayloadCMS para la red de talleres de marcas como Renault, Dacia, Porsche, Motrio y Seat.",
-          "Integración de servicios externos y APIs para la gestión de citas en tiempo real.",
+          "Desarrollo de interfaces dinámicas con Angular y migración progresiva de pantallas legacy basadas en JSP, JavaScript nativo y jQuery.",
+          "Diseño y despliegue de un CMS con Hugo y PayloadCMS para redes de talleres, además de integraciones con APIs externas para procesos operativos.",
         ],
         technologies: [
           "Java",
@@ -38,6 +35,7 @@ export const cvData: Record<Language, any> = {
           "Angular",
           "MariaDB",
           "MongoDB",
+          "Kafka",
           "PayloadCMS",
           "Microservicios",
           "Docker",
@@ -50,10 +48,9 @@ export const cvData: Record<Language, any> = {
         location: "Valença, Portugal",
         responsibilities: [
           "Desarrollo de módulos personalizados para la plataforma PrestaShop y creación de aplicaciones a medida para la optimización de procesos internos.",
-          "Implementación de soluciones utilizando PHP, MySQL, JavaScript (jQuery) y CSS para mejorar la adaptabilidad del software de la empresa.",
-          "Diseño y despliegue de endpoints para la extracción y el análisis de datos operativos.",
-          "Integración de servicios externos mediante el consumo de APIs REST para la automatización de tareas recurrentes.",
+          "Diseño y despliegue de endpoints para la extracción y análisis de datos operativos, integrando APIs REST para automatizar tareas recurrentes.",
           "Desarrollo inicial de un sistema ERP propio destinado a sustituir el front-end de PrestaShop, enfocado en mejorar el rendimiento y la escalabilidad de la plataforma.",
+          "Implementación de soluciones con PHP, MySQL y JavaScript para adaptar el software a necesidades internas de negocio.",
         ],
         technologies: ["PHP", "MySQL", "PrestaShop", "JavaScript"],
       },
@@ -114,7 +111,7 @@ export const cvData: Record<Language, any> = {
   gl: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Software Engineer | Java & Angular",
+      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, España",
@@ -122,7 +119,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Desenvolvedor Fullstack con máis de 2 anos de traxectoria, principalmente vinculado a proxectos do sector automoción. Experiencia co stack Java (Spring Boot) e Angular, encargándome tanto do mantemento como da implementación de novas funcionalidades e integracións de datos. Formación especializada en IA e Big Data.",
+        "Fullstack Software Engineer con máis de 2 anos de experiencia en produtos SaaS para automoción, traballando con Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o deseño de módulos críticos de VO/VN, integracións con fabricantes como Renault, BYD e Hyundai e microservizos para automatizar procesos de stock e facturación. Formación especializada en IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
       {
@@ -133,14 +130,11 @@ export const cvData: Record<Language, any> = {
         responsibilities: [
           "Desenvolvemento dunha integración con Renault para actualizar o stock de vehículos de ocasión dos obradoiros conectados á plataforma, con procesos diarios, mensuais e baixo demanda.",
           "Liderei o deseño e desenvolvemento do novo módulo de expedientes VO/VN para BYD e Hyundai, definindo a estrutura de datos, regras de negocio e configuración de conceptos do expediente.",
-          "O módulo permitiu xestionar expedientes de vehículos novos e de ocasión desde a plataforma, adaptando cada expediente ás necesidades de cada concesionario.",
-          "Este desenvolvemento eliminou unha limitación clave do produto, facilitou a entrada de novos concesionarios e supuxo unha mellora relevante na facturación da empresa.",
+          "O módulo permitiu xestionar expedientes de vehículos novos e de ocasión, eliminou unha limitación clave do produto e facilitou a entrada de novos concesionarios, con impacto positivo na facturación.",
           "Colaboración na integración de microservizos para actualizar o stock de concesionarios de BYD España e para automatizar procesos de impresión de facturas.",
           "Evolución da arquitectura backend en Java e MariaDB, optimizando consultas e procesos críticos vinculados á xestión de vehículos e expedientes.",
-          "Desenvolvemento de interfaces dinámicas con Angular para mellorar a operativa interna e o fluxo de datos entre cliente e servidor.",
-          "Migración progresiva de interfaces legacy baseadas en JSP, JavaScript nativo e jQuery cara a unha arquitectura moderna con Angular.",
-          "Deseño e despregamento dun sistema de xestión de contidos (CMS) mediante Hugo e PayloadCMS para a rede de obradoiros de marcas como Renault, Dacia, Porsche, Motrio e Seat.",
-          "Integración de servizos externos e APIs para a xestión de citas en tempo real.",
+          "Desenvolvemento de interfaces dinámicas con Angular e migración progresiva de pantallas legacy baseadas en JSP, JavaScript nativo e jQuery.",
+          "Deseño e despregamento dun CMS con Hugo e PayloadCMS para redes de obradoiros, ademais de integracións con APIs externas para procesos operativos.",
         ],
         technologies: [
           "Java",
@@ -148,6 +142,7 @@ export const cvData: Record<Language, any> = {
           "Angular",
           "MariaDB",
           "MongoDB",
+          "Kafka",
           "PayloadCMS",
           "Microservizos",
           "Docker",
@@ -160,10 +155,9 @@ export const cvData: Record<Language, any> = {
         location: "Valença, Portugal",
         responsibilities: [
           "Desenvolvemento de módulos personalizados para a plataforma PrestaShop e creación de aplicacións a medida para a optimización de procesos internos.",
-          "Implementación de solucións utilizando PHP, MySQL, JavaScript (jQuery) e CSS para mellorar a adaptabilidade do software da empresa.",
-          "Deseño e despregamento de endpoints para a extracción e a análise de datos operativos.",
-          "Integración de servizos externos mediante o consumo de APIs REST para a automatización de tarefas recurrentes.",
+          "Deseño e despregamento de endpoints para a extracción e análise de datos operativos, integrando APIs REST para automatizar tarefas recorrentes.",
           "Desenvolvemento inicial dun sistema ERP propio destinado a substituír o front-end de PrestaShop, enfocado en mellorar o rendemento e a escalabilidade da plataforma.",
+          "Implementación de solucións con PHP, MySQL e JavaScript para adaptar o software a necesidades internas de negocio.",
         ],
         technologies: ["PHP", "MySQL", "PrestaShop", "JavaScript"],
       },
@@ -224,7 +218,7 @@ export const cvData: Record<Language, any> = {
   en: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Software Engineer | Java & Angular",
+      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, Spain",
@@ -232,7 +226,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Fullstack Developer with over 2 years of experience, mainly linked to automotive projects. Practical experience with the Java (Spring Boot) and Angular stack, handling both maintenance and implementation of new features and data integrations. Specialized training in AI and Big Data.",
+        "Fullstack Software Engineer with over 2 years of experience building automotive SaaS products with Java, Spring Boot, Angular, MariaDB and MongoDB. Led the design of critical VO/VN modules, integrations with manufacturers such as Renault, BYD and Hyundai, and microservices to automate stock and invoicing processes. Specialized training in AI, Big Data, Kafka and Hadoop.",
     },
     experience: [
       {
@@ -243,14 +237,11 @@ export const cvData: Record<Language, any> = {
         responsibilities: [
           "Developed an integration with Renault to update the used-vehicle stock of workshops connected to the platform through daily, monthly and on-demand processes.",
           "Led the design and development of the new VO/VN case-file module for BYD and Hyundai, defining the data structure, business rules and configurable case-file concepts.",
-          "The module enabled the platform to manage new and used vehicle case files, adapting each file to the operational needs of each dealership.",
-          "This development removed a key product limitation, helped onboard new dealerships and contributed to a significant improvement in company revenue.",
+          "The module enabled new and used vehicle case-file management, removed a key product limitation and helped onboard new dealerships, positively impacting company revenue.",
           "Contributed to microservice integrations for updating BYD Spain dealership stock and automating invoice printing processes.",
           "Evolved the Java and MariaDB backend architecture, optimizing queries and critical processes related to vehicle and case-file management.",
-          "Built dynamic Angular interfaces to improve internal workflows and data flow between client and server.",
-          "Progressively migrated legacy interfaces based on JSP, native JavaScript and jQuery to a modern Angular architecture.",
-          "Designed and deployed a Content Management System (CMS) using Hugo and PayloadCMS for a network of workshops (Renault, Dacia, Porsche, Motrio, Seat).",
-          "Integrated external services and APIs for real-time appointment management.",
+          "Built dynamic Angular interfaces and progressively migrated legacy screens based on JSP, native JavaScript and jQuery.",
+          "Designed and deployed a CMS with Hugo and PayloadCMS for workshop networks, plus external API integrations for operational processes.",
         ],
         technologies: [
           "Java",
@@ -258,6 +249,7 @@ export const cvData: Record<Language, any> = {
           "Angular",
           "MariaDB",
           "MongoDB",
+          "Kafka",
           "PayloadCMS",
           "Microservices",
           "Docker",
@@ -270,10 +262,9 @@ export const cvData: Record<Language, any> = {
         location: "Valença, Portugal",
         responsibilities: [
           "Development of custom modules for the PrestaShop platform and creation of tailored applications for internal process optimization.",
-          "Implementation of solutions using PHP, MySQL, JavaScript (jQuery), and CSS to improve company software adaptability.",
-          "Design and deployment of endpoints for operational data extraction and analysis.",
-          "Integration of external services through REST APIs consumption for recurring task automation.",
+          "Designed and deployed endpoints for operational data extraction and analysis, integrating REST APIs to automate recurring tasks.",
           "Initial development of a proprietary ERP system to replace the PrestaShop front-end, focused on improving platform performance and scalability.",
+          "Implemented PHP, MySQL and JavaScript solutions to adapt internal software to business needs.",
         ],
         technologies: ["PHP", "MySQL", "PrestaShop", "JavaScript"],
       },
@@ -334,7 +325,7 @@ export const cvData: Record<Language, any> = {
   pt: {
     personalInfo: {
       name: "Hugo Martínez Barros",
-      title: "Software Engineer | Java & Angular",
+      title: "Fullstack Software Engineer | Java, Spring Boot & Angular",
       email: "hugo.martinez.ba2003@gmail.com",
       phone: "+34 698 177 749",
       location: "Gondomar, Espanha",
@@ -342,7 +333,7 @@ export const cvData: Record<Language, any> = {
       linkedin: "https://linkedin.com/in/hugomaartinez",
       github: "https://github.com/hugomaartinez",
       summary:
-        "Desenvolvedor Fullstack com mais de 2 anos de trajetória, principalmente vinculado a projetos do setor automotivo. Experiência com o stack Java (Spring Boot) e Angular, encarregando-me tanto da manutenção quanto da implementação de novas funcionalidades e integrações de dados. Formação especializada em IA e Big Data.",
+        "Fullstack Software Engineer com mais de 2 anos de experiência em produtos SaaS para automóvel, trabalhando com Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o design de módulos críticos de VO/VN, integrações com fabricantes como Renault, BYD e Hyundai e microsserviços para automatizar processos de stock e faturação. Formação especializada em IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
       {
@@ -353,14 +344,11 @@ export const cvData: Record<Language, any> = {
         responsibilities: [
           "Desenvolvimento de uma integração com a Renault para atualizar o stock de veículos de ocasião das oficinas conectadas à plataforma, com processos diários, mensais e sob demanda.",
           "Liderei o design e desenvolvimento do novo módulo de processos VO/VN para BYD e Hyundai, definindo a estrutura de dados, regras de negócio e configuração dos conceitos do processo.",
-          "O módulo permitiu gerir processos de veículos novos e de ocasião desde a plataforma, adaptando cada processo às necessidades de cada concessionária.",
-          "Este desenvolvimento eliminou uma limitação chave do produto, facilitou a entrada de novas concessionárias e contribuiu para uma melhoria relevante na faturação da empresa.",
+          "O módulo permitiu gerir processos de veículos novos e de ocasião, eliminou uma limitação chave do produto e facilitou a entrada de novas concessionárias, com impacto positivo na faturação.",
           "Colaboração na integração de microsserviços para atualizar o stock de concessionárias da BYD Espanha e automatizar processos de impressão de faturas.",
           "Evolução da arquitetura backend em Java e MariaDB, otimizando consultas e processos críticos ligados à gestão de veículos e processos.",
-          "Desenvolvimento de interfaces dinâmicas com Angular para melhorar a operação interna e o fluxo de dados entre cliente e servidor.",
-          "Migração progressiva de interfaces legadas baseadas em JSP, JavaScript nativo e jQuery para uma arquitetura moderna com Angular.",
-          "Design e implantação de um sistema de gerenciamento de conteúdo (CMS) usando Hugo e PayloadCMS para a rede de oficinas de marcas como Renault, Dacia, Porsche, Motrio e Seat.",
-          "Integração de serviços externos e APIs para o gerenciamento de compromissos em tempo real.",
+          "Desenvolvimento de interfaces dinâmicas com Angular e migração progressiva de ecrãs legados baseados em JSP, JavaScript nativo e jQuery.",
+          "Design e implantação de um CMS com Hugo e PayloadCMS para redes de oficinas, além de integrações com APIs externas para processos operacionais.",
         ],
         technologies: [
           "Java",
@@ -368,6 +356,7 @@ export const cvData: Record<Language, any> = {
           "Angular",
           "MariaDB",
           "MongoDB",
+          "Kafka",
           "PayloadCMS",
           "Microsserviços",
           "Docker",
@@ -380,10 +369,9 @@ export const cvData: Record<Language, any> = {
         location: "Valença, Portugal",
         responsibilities: [
           "Desenvolvimento de módulos personalizados para a plataforma PrestaShop e criação de aplicações sob medida para a otimização de processos internos.",
-          "Implementação de soluções utilizando PHP, MySQL, JavaScript (jQuery) e CSS para melhorar a adaptabilidade do software da empresa.",
-          "Design e implantação de endpoints para extração e análise de dados operacionais.",
-          "Integração de serviços externos através do consumo de APIs REST para automação de tarefas recorrentes.",
+          "Design e implantação de endpoints para extração e análise de dados operacionais, integrando APIs REST para automatizar tarefas recorrentes.",
           "Desenvolvimento inicial de um sistema ERP próprio destinado a substituir o front-end do PrestaShop, focado na melhoria do desempenho e escalabilidade da plataforma.",
+          "Implementação de soluções com PHP, MySQL e JavaScript para adaptar o software a necessidades internas de negócio.",
         ],
         technologies: ["PHP", "MySQL", "PrestaShop", "JavaScript"],
       },

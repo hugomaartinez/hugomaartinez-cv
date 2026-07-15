@@ -180,8 +180,9 @@ const t = labels[lang as Language];
       <h2 class="section-title">{t.exp}</h2>
       <div class="experience-list">
         {
-          experience.map((exp: any) => (
-            <div class="experience-item">
+          experience.map((exp: any, index: number) => (
+            <div class={`experience-item experience-item-${index}`}>
+              {index > 0 && <h2 class="section-title continued-title">{t.exp}</h2>}
               <div class="item-header">
                 <h3>{exp.position}</h3>
                 <span class="period">{exp.period}</span>
@@ -229,7 +230,7 @@ const t = labels[lang as Language];
     <section class="section">
       <h2 class="section-title">{t.skills}</h2>
       <div class="skill-groups">
-        <div class="skill-group">
+        <div class="skill-group skill-group-backend">
           <h3>Backend</h3>
           <div class="skill-list">
             {
@@ -239,7 +240,7 @@ const t = labels[lang as Language];
             }
           </div>
         </div>
-        <div class="skill-group">
+        <div class="skill-group skill-group-frontend">
           <h3>Frontend</h3>
           <div class="skill-list">
             {
@@ -249,7 +250,7 @@ const t = labels[lang as Language];
             }
           </div>
         </div>
-        <div class="skill-group">
+        <div class="skill-group skill-group-ai">
           <h3>{t.ai_skills}</h3>
           <div class="skill-list">
             {
@@ -349,6 +350,10 @@ const t = labels[lang as Language];
     color: var(--primary);
   }
 
+  .continued-title {
+    display: none;
+  }
+
   .experience-item,
   .education-item {
     margin-bottom: 2.5rem;
@@ -446,54 +451,159 @@ const t = labels[lang as Language];
       max-width: 100%;
     }
 
+    .header {
+      padding-bottom: 1.4rem;
+      margin-bottom: 1.45rem;
+    }
+
+    .header-content {
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
     .section {
-      margin-bottom: 2.5rem;
-      break-inside: auto; /* Permite que la sección empiece en una página y siga en otra */
+      margin-bottom: 1.55rem;
+      break-inside: auto;
+    }
+
+    .section-title {
+      font-size: 1.05rem !important;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.08em;
     }
 
     .experience-item,
-    .education-item,
-    .languages-section {
-      margin-bottom: 1.5rem;
-      break-inside: avoid;
+    .education-item {
+      margin-bottom: 1.35rem;
+      break-inside: avoid-page;
+      page-break-inside: avoid;
+    }
+
+    .experience-item-0 {
+      break-after: page;
+      page-break-after: always;
+    }
+
+    .experience-item-0 .responsibilities {
+      font-size: 1.04rem;
+      line-height: 1.58;
+      margin-bottom: 1rem;
+    }
+
+    .experience-item-0 .responsibilities li {
+      margin-bottom: 0.55rem;
+    }
+
+    .experience-item-0 .badge {
+      font-size: 0.82rem !important;
+      padding: 0.18rem 0.52rem !important;
+    }
+
+    .continued-title {
+      display: block;
+    }
+
+    .item-header {
+      margin-bottom: 0.1rem;
+    }
+
+    .item-sub {
+      font-size: 1rem;
+      margin-bottom: 0.65rem;
+    }
+
+    h3 {
+      font-size: 1.12rem !important;
+    }
+
+    .period,
+    .location {
+      font-size: 0.9rem !important;
     }
 
     .responsibilities {
-      font-size: 0.9rem;
+      font-size: 0.98rem;
       line-height: 1.5;
+      margin-bottom: 0.85rem;
+      padding-left: 1.2rem;
+    }
+
+    .responsibilities li {
+      margin-bottom: 0.42rem;
+    }
+
+    .summary {
+      font-size: 1rem;
+      line-height: 1.55;
+      text-align: left;
     }
 
     .skill-groups {
       display: grid !important;
-      grid-template-columns: repeat(3, 1fr) !important;
-      gap: 2rem !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 1.35rem !important;
+    }
+
+    .skill-group-ai {
+      grid-column: 1 / -1;
     }
 
     .skill-group h3 {
-      font-size: 0.7rem !important;
+      font-size: 0.82rem !important;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-list,
+    .tech-stack {
+      gap: 0.35rem;
     }
 
     .badge {
-      font-size: 0.75rem !important;
-      padding: 0.2rem 0.5rem !important;
+      font-size: 0.78rem !important;
+      padding: 0.16rem 0.48rem !important;
+      border-radius: 4px;
     }
 
-    .header {
-      padding-bottom: 2rem;
-      margin-bottom: 2rem;
+    .skill-group-ai .skill-list {
+      display: block;
+      line-height: 1.45;
+    }
+
+    .skill-group-ai .badge {
+      display: inline;
+      border: none;
+      background: transparent;
+      padding: 0 !important;
+      font-size: 0.86rem !important;
+      font-weight: 500;
+    }
+
+    .skill-group-ai .badge:not(:last-child)::after {
+      content: " · ";
+      color: var(--secondary);
+      font-weight: 400;
     }
 
     h1 {
-      font-size: 1.8rem !important;
+      font-size: 2rem !important;
       margin-top: 0;
     }
+
     .title {
-      font-size: 1.1rem !important;
-      margin-bottom: 0.5rem !important;
+      font-size: 1.15rem !important;
+      margin-bottom: 0.6rem !important;
     }
+
+    .contact-info {
+      gap: 0.6rem 1.1rem;
+      font-size: 0.86rem;
+    }
+
     .profile-img {
-      width: 100px;
-      height: 100px;
+      width: 92px;
+      height: 92px;
+      border-radius: 14px;
     }
   }
 </style>
