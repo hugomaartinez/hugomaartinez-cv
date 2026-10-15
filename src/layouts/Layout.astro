@@ -22,6 +22,14 @@ const languages = [
   { code: "pt", name: "Português", flag: "/flags/pt.svg" },
 ];
 
+const printLabels: Record<string, { label: string; hint: string }> = {
+  es: { label: "Imprimir / PDF", hint: "Para descargar, elige «Guardar como PDF» como destino" },
+  gl: { label: "Imprimir / PDF", hint: "Para descargar, escolle «Gardar como PDF» como destino" },
+  en: { label: "Print / PDF", hint: "To download, choose “Save as PDF” as the destination" },
+  pt: { label: "Imprimir / PDF", hint: "Para transferir, escolha «Guardar como PDF» como destino" },
+};
+const printText = printLabels[lang] ?? printLabels.es;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // JSON-LD for Person/Resume
@@ -48,8 +56,14 @@ const personSchema = {
 <html lang={lang} data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Primary Meta Tags -->
@@ -150,7 +164,12 @@ const personSchema = {
 
     <slot />
 
-    <button onclick="window.print()" class="print-button no-print">
+    <button
+      id="print-button"
+      type="button"
+      class="print-button no-print"
+      title={printText.hint}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -165,10 +184,20 @@ const personSchema = {
           d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
         ></path><rect x="6" y="14" width="12" height="8"></rect></svg
       >
-      Imprimir CV
+      {printText.label}
     </button>
 
     <script>
+      // Espera a que carguen las fuentes para que el PDF no salga con la tipografía de reserva
+      const printButton = document.getElementById("print-button");
+      printButton?.addEventListener("click", async () => {
+        try {
+          await document.fonts.ready;
+        } finally {
+          window.print();
+        }
+      });
+
       const themeToggle = document.getElementById("theme-toggle");
       themeToggle?.addEventListener("click", () => {
         const currentTheme =

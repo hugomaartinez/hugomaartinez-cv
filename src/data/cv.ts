@@ -16,6 +16,15 @@ export const cvData: Record<Language, any> = {
     },
     experience: [
       {
+        company: "Lidera Soluciones",
+        position: "Técnico de Producto",
+        period: "Sep 2026 - Actualidad",
+        responsibilities: [
+          "Incorporación al equipo de producto; actualmente en periodo de formación en la plataforma, los procesos internos y la metodología de trabajo de la compañía.",
+        ],
+        technologies: [],
+      },
+      {
         company: "Digitalizat Solutions",
         position: "Desarrollador Web - Fullstack",
         period: "Oct 2024 - Jul 2026",
@@ -122,6 +131,15 @@ export const cvData: Record<Language, any> = {
         "Software Developer con máis de 2 anos de experiencia en proxectos para automoción de marcas internacionais, traballando con Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o deseño de módulos de VO/VN, integracións con fabricantes como Renault, BYD e Hyundai e microservizos para automatizar procesos de stock e facturación. Formación especializada en IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
+      {
+        company: "Lidera Soluciones",
+        position: "Técnico de Produto",
+        period: "Set 2026 - Actualidade",
+        responsibilities: [
+          "Incorporación ao equipo de produto; actualmente en período de formación na plataforma, nos procesos internos e na metodoloxía de traballo da compañía.",
+        ],
+        technologies: [],
+      },
       {
         company: "Digitalizat Solutions",
         position: "Desenvolvedor Web - Fullstack",
@@ -230,6 +248,15 @@ export const cvData: Record<Language, any> = {
     },
     experience: [
       {
+        company: "Lidera Soluciones",
+        position: "Product Technician",
+        period: "Sep 2026 - Present",
+        responsibilities: [
+          "Joined the product team; currently in the onboarding and training period, learning the company's platform, internal processes and working methodology.",
+        ],
+        technologies: [],
+      },
+      {
         company: "Digitalizat Solutions",
         position: "Web Developer - Fullstack",
         period: "Oct 2024 - Jul 2026",
@@ -336,6 +363,15 @@ export const cvData: Record<Language, any> = {
         "Software Developer com mais de 2 anos de experiência em aplicações para automóvel de marcas internacionais, trabalhando com Java, Spring Boot, Angular, MariaDB e MongoDB. Liderei o design de módulos críticos de VO/VN, integrações com fabricantes como Renault, BYD e Hyundai e microsserviços para automatizar processos de stock e faturação. Formação especializada em IA, Big Data, Kafka e Hadoop.",
     },
     experience: [
+      {
+        company: "Lidera Soluciones",
+        position: "Técnico de Produto",
+        period: "Set 2026 - Presente",
+        responsibilities: [
+          "Integração na equipa de produto; atualmente em período de formação na plataforma, nos processos internos e na metodologia de trabalho da empresa.",
+        ],
+        technologies: [],
+      },
       {
         company: "Digitalizat Solutions",
         position: "Desenvolvedor Web - Fullstack",

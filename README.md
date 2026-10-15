@@ -32,11 +32,15 @@ He separado los datos de la estructura para que sea extremadamente fácil de man
 
 El proyecto incluye estilos específicos para impresión (`@media print`).
 
-1. Haz clic en el botón flotante **"Imprimir CV"**.
-2. Asegúrate de que en las opciones de impresión:
-   - Los **márgenes** estén en "Ninguno" o "Predeterminado".
-   - Los **gráficos de fondo** estén activados (opcional, para ver los colores y badges).
-   - El tamaño de papel sea **A4**.
+1. Haz clic en el botón flotante **"Imprimir / PDF"** (o `Ctrl + P`).
+2. Para descargarlo, elige **"Guardar como PDF"** como destino.
+3. En las opciones de impresión:
+   - **Márgenes:** "Predeterminado" (los márgenes ya vienen definidos en el CSS; con "Ninguno" el texto toca el borde del papel).
+   - **Escala:** "Predeterminado" / 100 %.
+   - **Tamaño de papel:** A4.
+   - **Encabezados y pies de página:** desactivados.
+
+El PDF sale siempre con la paleta clara, aunque la web esté en modo oscuro, y los fondos de las etiquetas se imprimen aunque "Gráficos de fondo" esté desactivado.
 
 ## ✨ Características
 
